@@ -45,6 +45,8 @@ export default function RootLayout({
         <meta name="twitter:image:type" content="website" />
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
+        <meta property="og:image:alt" content="Daniel Hernandez" />
+        <meta property="twitter:image:alt" content="Daniel Hernandez" />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
