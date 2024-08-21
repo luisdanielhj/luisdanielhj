@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {Card, CardContent} from "@/components/ui/card"
 import {Button} from "@/components/ui/button"
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel"
-import {Github, Twitter, Linkedin, Sun, Moon, Instagram} from 'lucide-react'
+import {Github, Twitter, Linkedin, Sun, Moon, Instagram, Mail} from 'lucide-react'
 import {useState, useEffect} from 'react'
 
 // Custom hook for managing theme
@@ -34,6 +34,21 @@ const useTheme = () => {
 
     return [theme, setTheme]
 }
+
+const projects = [
+    {
+        name: "UpSky",
+        description: "Software development company building world-class software solutions for your business. 🧑🏻‍💻",
+        link: "http://upsky.org",
+        image: "/banner-upsky.png"
+    },
+    {
+        name: "Stellar AI",
+        description: "A inventory with artificial intelligence tools to manage your inventory, sales, statistics and more of your business. 🚀",
+        link: "http://stellarhq.co",
+        image: "/banner-stellar.png"
+    }
+]
 
 export default function Component() {
     const [theme, setTheme] = useTheme()
@@ -71,6 +86,9 @@ export default function Component() {
                     <Link href="https://github.com/luisdanielhj" target="_blank" rel="noopener noreferrer">
                         <Github className="w-6 h-6"/>
                     </Link>
+                    <Link href="mailto:hola@luisdanielhj.com" target="_blank" rel="noopener noreferrer">
+                        <Mail className="w-6 h-6"/>
+                    </Link>
                 </div>
             </header>
 
@@ -101,23 +119,23 @@ export default function Component() {
                 <h2 className="text-2xl font-normal mb-4 text-center">My Projects</h2>
                 <Carousel className="w-full  mx-auto">
                     <CarouselContent>
-                        {[1, 2, 3].map((project) => (
-                            <CarouselItem key={project}>
+                        {projects.map((project) => (
+                            <CarouselItem key={project.name}>
                                 <Card>
                                     <CardContent className="flex flex-col items-center p-6">
                                         <Image
-                                            src={`/placeholder.svg?height=200&width=350&text=Project+${project}`}
+                                            src={project.image}
                                             alt={`Project ${project}`}
                                             width={350}
                                             height={200}
                                             className="rounded-lg mb-4"
                                         />
-                                        <h3 className="text-xl font-semibold mb-2">Project {project}</h3>
+                                        <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                                         <p className="text-center text-muted-foreground mb-4">
-                                            A brief description of Project {project} and its key features.
+                                            {project.description}
                                         </p>
                                         <Button asChild>
-                                            <Link href={`#project-${project}`}>Learn More</Link>
+                                            <Link href={project.link}>Learn More</Link>
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -131,7 +149,7 @@ export default function Component() {
             </section>
 
             {/* Blog Section */}
-            <section className="w-full max-w-2xl mx-auto mt-16 px-4">
+            {/* <section className="w-full max-w-2xl mx-auto mt-16 px-4">
                 <h2 className="text-2xl font-normal mb-4 text-center">Latest Blog Posts</h2>
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                     {[1, 2, 3, 4].map((post) => (
@@ -149,7 +167,7 @@ export default function Component() {
                         </Card>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer */}
             <footer className="w-full mt-12 py-6 bg-muted border-t-2">
