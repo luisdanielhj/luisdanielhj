@@ -44,7 +44,7 @@ const projects = [
     },
     {
         name: "Stellar AI",
-        description: "A inventory with artificial intelligence tools to manage your inventory, sales, statistics and more of your business. 🚀",
+        description: "Inventory with artificial intelligence tools to manage your inventory, sales, statistics and more of your business. 🚀",
         link: "http://stellarhq.co",
         image: "/banner-stellar.png"
     }
