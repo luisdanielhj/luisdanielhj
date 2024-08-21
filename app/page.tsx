@@ -65,7 +65,7 @@ export default function Component() {
                     <Link href="https://twitter.com/luisdanielhj" target="_blank" rel="noopener noreferrer">
                         <Twitter className="w-6 h-6"/>
                     </Link>
-                    <Link href="https://linkedin.com/luisdanielhj" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.linkedin.com/in/luisdanielhj/" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="w-6 h-6"/>
                     </Link>
                     <Link href="https://github.com/luisdanielhj" target="_blank" rel="noopener noreferrer">
@@ -80,7 +80,7 @@ export default function Component() {
                 <p className="text-muted-foreground">
                     I am Daniel Hernandez, a visionary with a passion for technology and a drive to push boundaries. As
                     the founder and CEO of UpSky, I’ve spent over five years building a software development company
-                    that thrives on innovation and excellence. My journey in tech isn’t just about coding—it's about
+                    that thrives on innovation and excellence. My journey in tech isn’t just about coding—it&apos;s about
                     transforming ideas into powerful digital experiences and leading a team committed to redefining
                     what’s possible.
                     <br/><br/>
@@ -92,7 +92,7 @@ export default function Component() {
                     My interests extend beyond the office. I’m deeply fascinated by AI, the sleek beauty of automotive
                     design, and the potential of new technologies to reshape our future. I believe in the power of
                     connections and the value of a strong network. If you share this vision and are ready to discuss
-                    bold ideas, let's connect.
+                    bold ideas, let&apos;s connect.
                 </p>
             </section>
 
