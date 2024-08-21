@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,6 +33,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta property="og:title" content="Daniel Hernandez" />
+        <meta property="og:description" content="@luisdanielhj" />
+        <meta property="og:image" content="/daniel-hernandez.png" />
+        <meta property="og:url" content="https://luisdanielhj.com" />
+        <meta property="og:type" content="website" />
+        {/* Add any other global meta tags here */}
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
